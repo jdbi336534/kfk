@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<script src="js/zepto_1.1.3.js"></script>
+		<script src="js/ilink-js-sdk.min.js"></script>
+		<script src="js/cmdControl.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+		</script>
+		<style>
+			html,
+			body {
+				height: 100%;
+			}
+			
+			p {
+				margin: 0;
+			}
+			
+			.scroll-style {
+				padding-top: 44px;
+			}
+			
+			.tem-hum-content {
+				height: 40vw;
+				display: flex;
+				flex-direction: row;
+				background: #666699;
+			}
+			
+			.tem-hum {
+				height: 100%;
+				flex: 1;
+			}
+			
+			.temp {
+				height: 40vw;
+				line-height: 40vw;
+				text-align: center;
+			}
+			
+			.temp-size {
+				font-size: 16vw;
+				color: #b2b2cc;
+			}
+			
+			.switch-content {
+				width: 100%;
+				height: 10vw;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+			}
+			
+			.switch-wrap {
+				height: 10vw;
+				width: 30%;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				align-items: center;
+			}
+			
+			.range-wrap {
+				height: 10vw;
+				width: 100%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav" data-top='0' data-offset='150' data-duration='16' data-scrollby=".mui-scroll-wrapper">
+			<h1 class="mui-title">智能家庭中央控制系统(<span id="dev-status">离线</span>)</h1>
+		</header>
+		<div class="mui-scroll-wrapper">
+			<div class="mui-scroll scroll-style">
+				<div class="mui-card">
+					<!--温湿度-->
+					<div class="mui-card-header mui-card-media">
+						<img src="http://dcloud.io/hellomui/images/logo.png" />
+						<div class="mui-media-body">
+							温湿度
+							<p>最后一次接收时间 2016-06-30 15:30</p>
+						</div>
+					</div>
+					<!--内容区-->
+					<div class="mui-card-content">
+						<div class="mui-content">
+							<div class="mui-row tem-hum-content">
+								<div class="tem-hum" style="border-right:1px solid #728896;">
+									<p class="temp"><span class="temp-size">36</span>℃</p>
+								</div>
+								<div class="tem-hum">
+									<p class="temp"><span class="temp-size">50</span>%</p>
+								</div>
+							</div>
+						</div>
+						<!--<div class="mui-card-header mui-card-media" style="height:40vw;background-image:url(http://dcloud.io/hellomui/images/yuantiao.jpg)"></div>-->
+					</div>
+					<!--页脚，放置补充信息或支持的操作-->
+					<div class="mui-card-footer">今天的天气</div>
+				</div>
+				<div class="mui-card">
+					<!--开关型-->
+					<div class="mui-card-header mui-card-media">
+						<img src="http://dcloud.io/hellomui/images/logo.png" />
+						<div class="mui-media-body">
+							开关型
+							<p>最后一次操作时间 2016-06-30 15:30</p>
+						</div>
+					</div>
+					<!--内容区-->
+					<div class="mui-card-content">
+						<div class="switch-header">
+							<div class="switch-content">
+								<div class="switch-wrap">卧室灯</div>
+								<div class="switch-wrap"></div>
+								<div class="switch-wrap">
+									<div class="mui-switch" flag="switch1">
+										<div class="mui-switch-handle"></div>
+									</div>
+								</div>
+							</div>
+							<div class="switch-content">
+								<div class="switch-wrap">水泵</div>
+								<div class="switch-wrap"></div>
+								<div class="switch-wrap">
+									<div class="mui-switch" flag="switch2">
+										<div class="mui-switch-handle"></div>
+									</div>
+								</div>
+							</div>
+							<div class="switch-content">
+								<div class="switch-wrap">客厅灯</div>
+								<div class="switch-wrap"></div>
+								<div class="switch-wrap">
+									<div class="mui-switch" flag="switch3">
+										<div class="mui-switch-handle"></div>
+									</div>
+								</div>
+							</div>
+							<div class="switch-content">
+								<div class="switch-wrap">楼道灯</div>
+								<div class="switch-wrap"></div>
+								<div class="switch-wrap">
+									<div class="mui-switch" flag="switch4">
+										<div class="mui-switch-handle"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--页脚，放置补充信息或支持的操作-->
+					<!--<div class="mui-card-footer">页脚</div>-->
+				</div>
+				<div class="mui-card">
+					<!--AD型-->
+					<div class="mui-card-header mui-card-media">
+						<img src="http://dcloud.io/hellomui/images/logo.png" />
+						<div class="mui-media-body">
+							PWM型
+							<p>最后一次操作时间 2016-06-30 15:30</p>
+						</div>
+					</div>
+					<!--内容区-->
+					<div class="mui-card-content">
+						<div class="switch-header">
+							<div class="switch-content">
+								<div class="range-wrap">
+									<div class="mui-input-row mui-input-range">
+										<label>PWM1</label>
+										<input type="range" min="0" max="100" class="pwm-range" flag='range1'>
+									</div>
+								</div>
+							</div>
+							<div class="switch-content">
+								<div class="range-wrap">
+									<div class="mui-input-row mui-input-range">
+										<label>PWM2</label>
+										<input type="range" min="0" max="100" class="pwm-range" flag='range2'>
+									</div>
+								</div>
+							</div>
+							<div class="switch-content">
+								<div class="range-wrap">
+									<div class="mui-input-row mui-input-range">
+										<label>PWM3</label>
+										<input type="range" min="0" max="100" class="pwm-range" flag='range3'>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--页脚，放置补充信息或支持的操作-->
+					<!--<div class="mui-card-footer">页脚</div>-->
+				</div>
+				<button type="button" data-loading-icon="mui-spinner mui-spinner-custom" data-loading-text="开启中..." class="mui-btn mui-btn-success mui-btn-outlined">确认</button>
+			</div>
+		</div>
+
+		<script type="text/javascript" charset="utf-8">
+			mui(document.body).on('tap', '.mui-btn', function(e) {
+				mui(this).button('loading');
+				setTimeout(function() {
+					mui(this).button('reset');
+				}.bind(this), 2000);
+			});
+			mui('.mui-scroll-wrapper').scroll({
+				scrollY: true, //是否竖向滚动
+				scrollX: false, //是否横向滚动
+				startX: 0, //初始化时滚动至x
+				startY: 0, //初始化时滚动至y
+				indicators: true, //是否显示滚动条
+				deceleration: 0.0006, //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+				bounce: true //是否启用回弹
+			});
+			// 给页面中的switch绑定事件
+			$('.mui-switch').each(function(index, ele) {
+				ele.addEventListener("toggle", function(event) {
+					if(event.detail.isActive) {
+						switch(event.target.attributes.flag.value) {
+							case 'switch1':
+								console.log("你启动了开关", 1);
+								break;
+							case 'switch2':
+								console.log("你启动了开关", 2);
+								break;
+							case 'switch3':
+								console.log("你启动了开关", 3);
+								break;
+							case 'switch4':
+								console.log("你启动了开关", 4);
+								break;
+						}
+					} else {
+						switch(event.target.attributes.flag.value) {
+							case 'switch1':
+								console.log("你关闭了开关", 1);
+								break;
+							case 'switch2':
+								console.log("你关闭了开关", 2);
+								break;
+							case 'switch3':
+								console.log("你关闭了开关", 3);
+								break;
+							case 'switch4':
+								console.log("你关闭了开关", 4);
+								break;
+						}
+					}
+				});
+			});
+			$('.pwm-range').each(function(index, ele) {
+				ele.addEventListener("change", function(event) {
+					switch(event.target.attributes.flag.value) {
+						case 'range1':
+							console.log("你操作了滑块1", ele.value);
+							break;
+						case 'range2':
+							console.log("你操作了滑块2", ele.value);
+							break;
+						case 'range3':
+							console.log("你操作了滑块3", ele.value);
+							break;
+					}
+				})
+			});
+		</script>
+	</body>
+
+</html>
