@@ -76,14 +76,14 @@
 
 	<body>
 		<header class="mui-bar mui-bar-nav" data-top='0' data-offset='150' data-duration='16' data-scrollby=".mui-scroll-wrapper">
-			<h1 class="mui-title">智能家庭中央控制系统(<span id="dev-status">离线</span>)</h1>
+			<h1 class="mui-title">智能家庭中央控制系统(<span id="dev-status">连接中...</span>)</h1>
 		</header>
 		<div class="mui-scroll-wrapper">
 			<div class="mui-scroll scroll-style">
 				<div class="mui-card">
 					<!--温湿度-->
 					<div class="mui-card-header mui-card-media">
-						<img src="http://dcloud.io/hellomui/images/logo.png" />
+						<img src="./img/tem.png" />
 						<div class="mui-media-body">
 							温湿度
 							<p>最后一次接收时间 2016-06-30 15:30</p>
@@ -109,7 +109,7 @@
 				<div class="mui-card">
 					<!--开关型-->
 					<div class="mui-card-header mui-card-media">
-						<img src="http://dcloud.io/hellomui/images/logo.png" />
+						<img src="./img/switch.jpg" />
 						<div class="mui-media-body">
 							开关型
 							<p>最后一次操作时间 2016-06-30 15:30</p>
@@ -162,7 +162,7 @@
 				<div class="mui-card">
 					<!--AD型-->
 					<div class="mui-card-header mui-card-media">
-						<img src="http://dcloud.io/hellomui/images/logo.png" />
+						<img src="./img/pwm.gif" />
 						<div class="mui-media-body">
 							PWM型
 							<p>最后一次操作时间 2016-06-30 15:30</p>
@@ -227,6 +227,7 @@
 						switch(event.target.attributes.flag.value) {
 							case 'switch1':
 								console.log("你启动了开关", 1);
+								lightControl(0xff);
 								break;
 							case 'switch2':
 								console.log("你启动了开关", 2);
@@ -242,6 +243,7 @@
 						switch(event.target.attributes.flag.value) {
 							case 'switch1':
 								console.log("你关闭了开关", 1);
+								lightControl(0x00);
 								break;
 							case 'switch2':
 								console.log("你关闭了开关", 2);
