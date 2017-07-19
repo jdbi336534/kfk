@@ -9,6 +9,7 @@
         "user_config.h": "c",
         "pin_mux_register.h": "c",
         "rgb_light.h": "c",
-        "gpio.h": "c"
+        "gpio.h": "c",
+        "base.c": "cpp"
     }
 }
