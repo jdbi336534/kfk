@@ -166,9 +166,8 @@ img {
 .weather-footer {
 	width: 100vw;
 	height: 14vh;
-	
 	position: absolute;
-	bottom: 0;
+	 bottom: 8vh;
 }
 
 .weather-footer-info {

@@ -1,4 +1,4 @@
-mui.init();
+
 
 //自定义$
 //function $(name) {
@@ -18,13 +18,13 @@ var currMonth = new Date().getMonth() + 1; //获取月份判断季节
 var statusBarBgColors = ['#76A4A1', '#91A5AC', '#819BAD', '#919799'];  //各季节壁纸对应状态栏颜色
 
 if (2 <= currMonth && currMonth <= 4) {
-	$('.weather-cover').eq(0).attr("class",'weather-cover-spring');
+	$('.weather-cover').addClass('weather-cover-spring');
 } else if (5 <= currMonth && currMonth <= 7) {
-	$('.weather-cover').eq(0).attr("class", 'weather-cover-summer');	
+	$('.weather-cover').addClass( 'weather-cover-summer');	
 } else if (8 <= currMonth && currMonth <= 10) {
-	$('.weather-cover').eq(0).attr("class",'weather-cover-autumn');
+	$('.weather-cover').addClass('weather-cover-autumn');
 } else {
-	$('.weather-cover').eq(0).attr("class",'weather-cover-winter');
+	$('.weather-cover').addClass('weather-cover-winter');
 }	
 
 //先获取ip地址，再根据ip地址获取天气信息
