@@ -1,0 +1,201 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	
+	overflow: hidden;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+}
+
+.weather-cover {
+	width: 100vw;
+	height: 100vh;
+
+	background: center no-repeat;
+	background-size: 100% 100%;	
+	z-index: -10;
+}
+
+.weather-cover-spring {
+	background-image: url(../img/autumn.jpg);
+}
+
+.weather-cover-summer {
+	background-image: url(../img/summer.jpg);
+}
+
+.weather-cover-autumn {
+	background-image: url(../img/autumn.jpg);
+}
+
+.weather-cover-winter {
+	background-image: url(../img/winter.jpg);
+}
+
+.weather-content {
+	width: 100vw;
+	height: 100vh;
+	
+	background: rgba(0, 0, 0, 0.3);
+	
+	position: fixed;
+	left: 0;
+	top: 0;
+}
+
+.weather-content-header {
+	width: 100vw;
+	height: 15vh;
+	
+	color: #fff;
+	
+	position: absolute;
+	top: 5vh;
+}
+
+#weather-icon {
+	width: 28px;
+	height: 28px;
+	
+	position: absolute;
+	top: 2vh;
+	left: 40vw;
+}
+
+#weather-location {
+	width: 200px;
+	height: 64px;
+	
+	text-align: left;
+	
+	position: absolute;
+	top: calc(2vh + 6px);
+	left: calc(36vw + 45px);
+}
+
+#weather-location p {
+	font-size: 20px;
+}
+
+.weather-temp {
+	width: 100vw;
+	height: 36vh;
+	
+	
+	text-align: center;
+	font-size: 120px;
+	line-height: 36vh;
+	color: #fff;
+	
+	position: absolute;
+	top: 21vh;
+}
+
+.weather-temp::after {
+	content: "o";
+	display: block;
+	
+	font-size: 40px;
+
+	position: absolute;
+	top: -8vh;
+	right: calc(50vw - 98px);
+}
+
+.weather-content-footer {
+	width: 100vw;
+	height: 8vh;
+	
+	position: absolute;
+	top: 60vh;
+}
+
+.weather-other-info {
+	width: 25vw;
+	height: 90%;
+	
+	margin-left: 2vw;
+	
+	text-align: center;
+	
+	float: left;
+	
+	position: relative;
+}
+
+.weather-other-info:first-child {
+	margin-left: 16vw;
+}
+
+.weather-other-info:nth-child(2) {
+	margin-left: -4vw;
+}
+.weather-other-info img {
+	width: 22px;
+	height: 22px;
+	
+	position: absolute;
+	left: 0;
+}
+
+.weather-other-info:nth-child(3) img {
+	width: 20px;
+	height: 20px;
+	left: 8px;
+	top: 2px;
+}
+
+.weather-other-info span {
+	font-size: 14px;
+	color: #fff;
+	
+	position: absolute;
+	top: 5px;
+	left: 28px;
+}
+
+.weather-footer {
+	width: 100vw;
+	height: 14vh;
+	
+	position: absolute;
+	bottom: 0;
+}
+
+.weather-footer-info {
+	width: 25%;
+	height: 100%;
+	
+	text-align: center;
+	color: #fff;
+	
+	float: left;
+	
+	position: relative;
+}
+
+.weather-footer-info p {
+	font-size: 10px;
+	margin-top: 4px;
+}
+
+.weather-footer-info p:last-child {
+	margin-top: 10px;
+	font-size: 14px;
+}
+
+.weather-footer-info img {
+	width: 24px;
+	height: 24px;
+	
+	margin-top: 6px;
+}

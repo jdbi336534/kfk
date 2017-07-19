@@ -9,7 +9,9 @@
 		<script src="js/zepto_1.1.3.js"></script>
 		<script src="js/ilink-js-sdk.min.js"></script>
 		<script src="js/cmdControl.js"></script>
+		<script src="js/index.js"></script>
 		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/index.css" rel="stylesheet" />
 		<script type="text/javascript" charset="utf-8">
 			mui.init();
 		</script>
@@ -235,7 +237,64 @@
 						<!-- 主页 -->
 						<!-- 消息 -->
 						<div id="infopage" style="display:none">
-							消息页面
+							<div class="weather-cover"></div>
+	<div class="weather-content">
+		<div class="weather-content-header">
+			<div id="weather-icon">
+				<img src="img/location.svg" alt="" />
+			</div>
+			<div id="weather-location">
+				<p id="weather-citynm">**</p>
+			</div>
+		</div>
+		
+		<div class="weather-temp" id="weatherInfo-temperature_curr">
+			
+		</div>
+		
+		<div class="weather-content-footer">
+			<div id="weather-wind" class="weather-other-info">
+				<img src="img/wind.svg" alt="" />
+				<span class="weatherInfo-wind"></span>
+			</div>
+			
+			<div id="weather-currweather" class="weather-other-info">
+				<img src="img/weather.svg" alt="" />
+				<span id="weatherInfo-weather"></span>
+			</div>
+			
+			<div id="weather-humidity" class="weather-other-info">
+				<img src="img/humidity_small.svg" alt="" />
+				<span class="weatherInfo-humidity"></span>
+			</div>
+		</div>
+		
+		<div class="weather-footer">
+			<div class="weather-footer-info">
+				<p class="weatherInfo-wind"></p>
+				<img src="img/wind2.svg" alt="" />
+				<p id="weatherInfo-winp"></p>
+			</div>
+			
+			<div class="weather-footer-info">
+				<p>最高温度</p>
+				<img src="img/temp.svg" alt="" />
+				<p id="weatherInfo-temp_high"></p>
+			</div>
+			
+			<div class="weather-footer-info">
+				<p>最低温度</p>
+				<img src="img/temp_low.svg" alt="" />
+				<p id="weatherInfo-temp_low"></p>
+			</div>
+			
+			<div class="weather-footer-info">
+				<p>湿度</p>
+				<img src="img/humidity.svg" alt="" />
+				<p class="weatherInfo-humidity"></p>
+			</div>
+		</div>
+	</div>
 						</div>
 						<!-- 消息 -->
 						<!-- 设置 -->
