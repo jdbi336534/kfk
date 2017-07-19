@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<script src="js/ilink-js-sdk.min.js"></script>
+		<script src="js/cmdControl.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+		</script>
+		<style>
+			html,
+			body {
+				height: 100%;
+			}
+			p{
+				margin:0;
+			}
+			.scroll-style {
+				padding-top: 44px;
+			}
+			.tem-hum-content{
+				height:40vw;
+				display:flex;
+				flex-direction: row;
+				background:#666699;
+				
+			}
+			.tem-hum{
+				height:100%;
+				flex:1;
+			}
+			.temp{
+				height:40vw;
+				line-height: 40vw;
+				text-align: center;
+			}
+			.temp-size{
+				font-size:16vw;
+				color:#b2b2cc;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav" data-top='0' data-offset='150' data-duration='16' data-scrollby=".mui-scroll-wrapper">
+			<h1 class="mui-title">智能家庭中央控制系统</h1>
+		</header>
+		<div class="mui-scroll-wrapper">
+			<div class="mui-scroll scroll-style">
+				<!--这里放置真实显示的DOM内容-->
+				<div class="mui-card">
+					<!--页眉，放置标题-->
+					<div class="mui-card-header mui-card-media">
+						<img src="http://dcloud.io/hellomui/images/logo.png" />
+						<div class="mui-media-body">
+							温湿度
+							<p>最后一次接收时间 2016-06-30 15:30</p>
+						</div>
+					</div>
+					<!--内容区-->
+					<div class="mui-card-content">
+						<div class="mui-content">
+							<div class="mui-row tem-hum-content">
+								<div class="tem-hum" style="border-right:1px solid #728896;"><p class="temp"><span class="temp-size">36</span>℃</p></div>
+								<div class="tem-hum"><p class="temp"><span class="temp-size">50</span>%</p></div>
+							</div>
+						</div>
+						<!--<div class="mui-card-header mui-card-media" style="height:40vw;background-image:url(http://dcloud.io/hellomui/images/yuantiao.jpg)"></div>-->
+					</div>
+					<!--页脚，放置补充信息或支持的操作-->
+					<!--<div class="mui-card-footer">页脚</div>-->
+				</div>
+				<div class="mui-card">
+					<!--页眉，放置标题-->
+					<div class="mui-card-header mui-card-media">
+						<img src="http://dcloud.io/hellomui/images/logo.png" />
+						<div class="mui-media-body">
+							开关型
+							<p>最后一次操作时间 2016-06-30 15:30</p>
+						</div>
+					</div>
+					<!--内容区-->
+					<div class="mui-card-content">
+						<div class="mui-card-header mui-card-media" style="height:40vw;background-image:url(http://dcloud.io/hellomui/images/yuantiao.jpg)"></div>
+					</div>
+					<!--页脚，放置补充信息或支持的操作-->
+					<div class="mui-card-footer">页脚</div>
+				</div>
+				<div class="mui-card">
+					<!--页眉，放置标题-->
+					<div class="mui-card-header mui-card-media">
+						<img src="http://dcloud.io/hellomui/images/logo.png" />
+						<div class="mui-media-body">
+							AD型
+							<p>最后一次操作时间 2016-06-30 15:30</p>
+						</div>
+					</div>
+					<!--内容区-->
+					<div class="mui-card-content">
+						<div class="mui-card-header mui-card-media" style="height:40vw;background-image:url(http://dcloud.io/hellomui/images/yuantiao.jpg)"></div>
+					</div>
+					<!--页脚，放置补充信息或支持的操作-->
+					<div class="mui-card-footer">页脚</div>
+				</div>
+				<button type="button" data-loading-icon="mui-spinner mui-spinner-custom" data-loading-text="开启中..." class="mui-btn mui-btn-success mui-btn-outlined">确认</button>
+			</div>
+		</div>
+
+		<script type="text/javascript" charset="utf-8">
+			mui(document.body).on('tap', '.mui-btn', function(e) {
+				mui(this).button('loading');
+				setTimeout(function() {
+					mui(this).button('reset');
+				}.bind(this), 2000);
+			});
+			mui('.mui-scroll-wrapper').scroll({
+				scrollY: true, //是否竖向滚动
+				scrollX: false, //是否横向滚动
+				startX: 0, //初始化时滚动至x
+				startY: 0, //初始化时滚动至y
+				indicators: true, //是否显示滚动条
+				deceleration: 0.0006, //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+				bounce: true //是否启用回弹
+			});
+		</script>
+	</body>
+
+</html>
