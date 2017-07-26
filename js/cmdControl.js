@@ -8,7 +8,7 @@ var userUid = '';
 // 控制端的Secretkey
 var userSecretkey = '';
 //负载均衡服务器地址.IM WEB地址
-var balance_server = '';
+var balance_server = 'ws://lb.kaifakuai.com:1885';
 
 var devState = 0;
 var opt = {
