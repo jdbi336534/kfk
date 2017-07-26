@@ -1,0 +1,17 @@
+{
+  "index.html": {
+    "href": "index.html",
+    "resources": [
+      "js/mui.min.js",
+      "js/zepto_1.1.3.js",
+      "js/ilink-js-sdk.min.js",
+      "js/cmdControl.js",
+      "css/mui.min.css",
+      "img/tem.png",
+      "img/switch.jpg",
+      "img/pwm.gif"
+    ],
+    "refer": [],
+    "priority": 0
+  }
+}

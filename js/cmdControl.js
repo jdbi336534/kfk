@@ -1,19 +1,19 @@
 // 一些配置参数
 // 小E开发板的uid
-var devUid = 'Fc5wGsTuvumomVom7eixwJ2UfKJwuxgvKf';
-// 小E开发板的Appkey
-var devAppkey = 'a56ae6d4-946d-880526';
+var devUid = 'Fc5wGsTuvumomVomDg4VMfARkvxHKA8BvY';
+// 控制端的的Appkey
+var userAppkey = 'b2ce041a-ae7e-010001';
 // 控制端的uid
-var userUid = 'Fc5wGsTuvumvyVvyFG7Tt9ShD6eFhTCBfw';
+var userUid = 'Fc5wGsTuvumomVomKZetmgGMyvzdni9CUk';
 // 控制端的Secretkey
-var userSecretkey = '0b5cd6a7769618139b5593a1975ffc1e';
+var userSecretkey = 'b8db10692edcf31b64c65bb9aa9615c8';
 //负载均衡服务器地址.IM WEB地址
 var balance_server = 'ws://lb.kaifakuai.com:1885';
 
 var devState = 0;
 var opt = {
 	userid: userUid,
-	appkey: devAppkey,
+	appkey: userAppkey,
 	secretkey: userSecretkey,
 	balanceServer: balance_server,
 	clean: 0
